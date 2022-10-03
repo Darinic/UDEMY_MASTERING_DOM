@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <div id="three-a">
+        <button id="button1">Button one</button>
+    </div>
+    <button id="button2">Button two</button>
+    <script>
+        let buttonOne = document.getElementById("button1");
+        // execute our handler in the capturing phase
+        buttonOne.addEventListener('click', clickHandler, true)
+        //execute our handler in the bubbling phrase
+        buttonOne.addEventListener('click', clickHandler, false)
+        // add listener on our Div parent element
+        let threeA = document.getElementById("three-a");
+        threeA.addEventListener('click', quitIt, true)
+        //define our handler
+
+        function quitIt(e) {
+            console.log('You have been stopped in your tracks!')
+            e.stopPropagation()
+        }
+
+        function clickHandler(event) {
+            console.log('I have been clicked');
+        }
+    </script>
+</body>
+
+</html>

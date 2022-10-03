@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Creating Elements
+        </title>
+        <style>
+            body {
+                background-color: rgb(74,59, 206);
+                padding:30px;
+            }
+            h1 {
+                color: #14FFF7;
+                font-size:72px;
+                font-family: sans-serif;
+                text-decoration: underline;
+            }
+            p {
+                color: #14FFF7;
+                font-size: 36px;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Am I real?
+        </h1>
+        <script>
+            let newElement = document.createElement('p');
+            newElement.textContent= "Or am I a figment of your imagination?";
+            // step 1- lets grab the parent
+            let bodyElement = document.querySelector('body');
+            let h1Element= document.querySelector('h1');
+            // step 2- lets now attach our p tag to this body
+            bodyElement.appendChild(newElement);
+            // 1. lets find the sibling we want to procede
+            // let scriptElement = document.querySelector('script');
+            ///
+            // let h1NextElement = h1Element.nextElementSibling;
+            // bodyElement.insertBefore(newElement, h1NextElement);
+            /// Remove
+            // bodyElement.removeChild(newElement)
+            // newElement.parentNode.removeChild(newElement);
+            newElement.remove();
+        </script>
+    </body>
+</html>

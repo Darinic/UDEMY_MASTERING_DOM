@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Click Image</h1>
+        <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg" width=300px height=200px alt="catImage" id="image">
+    <br> <br>
+        <div id="content"></div>
+        <script>
+            let image = document.getElementById('image');
+
+            let content = document.getElementById('content');
+
+            image.addEventListener('click', function() {
+                content.innerHTML = 'You clicked the image';
+            });
+        </script>
+    </body>
+</html>

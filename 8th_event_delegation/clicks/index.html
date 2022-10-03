@@ -1,0 +1,62 @@
+<html>
+    <header>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>
+        <ul id="food">
+            <li>Meats
+                <ul>
+                    <li>Red Meats
+                        <ul>
+                            <li>Beef</li>
+                            <li>Pork</li>
+                            <li>Chicken</li>
+                        </ul>
+                    </li>
+                    <li>Others
+                        <ul>
+                            <li>Shrimp</li>
+                            <li>Crab</li>
+                            <li>Lobster</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Vegetables
+                <ul>
+                    <li>Yummy ones
+                        <ul>
+                            <li>Potatoes</li>
+                            <li>Asparagus</li>
+                            <li>Peas</li>
+                        </ul>
+                    </li>
+                    <li>Yucky ones
+                        <ul>
+                            <li>Brussels Sprouts</li>
+                            <li>Kale</li>
+                            <li>Mushrooms</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            let food = document.getElementById('food');
+            food.addEventListener('click', showOrHide);
+            function showOrHide(e) {
+                let target = e.target;
+                if(target.tagName != 'LI') {
+                    return;
+                } else {
+                    let childrenContainer = target.querySelector('ul');
+                    if(!childrenContainer) {
+                        return;
+                    } else {
+                        childrenContainer.hidden = !childrenContainer.hidden;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

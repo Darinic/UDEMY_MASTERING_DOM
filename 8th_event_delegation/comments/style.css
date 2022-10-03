@@ -1,0 +1,32 @@
+body {
+    margin: 10px auto;
+    width: 450px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    margin: 0;
+    padding-bottom: 0.3em;
+}
+
+p {
+    margin:0;
+    padding-bottom: 1em;
+}
+
+.box {
+    background: rgb(40,133,255, 0.308);
+    padding:10px 20px 10px;
+    border-top: 2px solid blue;
+    position:relative;
+}
+
+.remove {
+    position: absolute;
+    top:0.3em;
+    right: 0.3em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: darkred;
+}

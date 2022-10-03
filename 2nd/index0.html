@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <ul>
+            <li>BAM</li>
+            <li>POW</li>
+            <li>KAZAM</li>
+        </ul>
+        <script>
+            // ************ HTML COLLECTION TYPE
+            // let list = document.getElementsByTagName('li');
+            // console.log(list);
+
+            // //lets modify the DOM
+            // list[0].parentNode.appendChild(document.createElement('li'));
+            // console.log(list)
+
+            // ******* NODE LIST TIME
+
+            //lets grab all of our list tags
+            let listItems= document.querySelectorAll('li');
+            console.log(listItems)
+
+            //lets add to the list and prove that the NodeList is static
+
+            listItems[0].parentNode.appendChild(document.createElement('li'));
+            console.log(listItems)
+
+            //lets requery the DOM
+
+            listItems = document.querySelectorAll('li');
+            console.log(listItems)
+        </script>
+    </body>
+</html>

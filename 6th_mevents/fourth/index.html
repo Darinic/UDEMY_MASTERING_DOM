@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+            #mustache {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./personFace.jpg" alt="personFaceImage" width=300px id="person">
+        <img src="./mustache.png" alt="mustacheImage" width=150px id="mustache">
+        <script>
+            let person = document.getElementById('person');
+            let onPersonClick = (e) => {
+                let mustache = document.getElementById('mustache');
+                mustache.style.top = `${e.clientY - 42}px`;
+                mustache.style.left = `${e.clientX - 80}px`;
+            }
+            person.addEventListener('click', onPersonClick);
+        </script>
+    </body>
+</html>

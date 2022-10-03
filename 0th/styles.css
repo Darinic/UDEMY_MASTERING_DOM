@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+
+body {
+  font-family: 'muli', sans-serif;
+}
+
+.container {
+    background-color: #f5f5f5;
+    border: solid 6px #fff;
+    border-radius: 10px;
+    box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    margin: auto;
+    width: 750px;
+}
+
+.container .single-item {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+    width: 750px;
+}
+
+.single-item .left-set, .right-set {
+    height: 100%;;
+    width: 50%;
+}
+
+.single-item .left-set{
+    padding-top: 25px;
+    text-align: center;
+}
+
+.single-item .left-set img {
+    height: 350px;
+    width: auto;
+}
+
+.single-item .right-set {
+    padding: 2rem 1rem;
+}
+
+.single-item .right-set .itemName, .itemSubname, .itemPrice {
+    font-weight: bold;
+}
+
+.right-set .itemName {
+    font-size: 1.4rem;
+    line-height:2rem;
+}
+
+.right-set .itemSubname {
+    font-size:0.8rem;
+    line-height:1rem;
+}
+
+.right-set .itemPrice {
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.right-set .itemDescription p {
+    font-size:0.95rem;
+    hyphens: bold;
+    text-align: justify;
+}
+
+.right-set .itemColor {
+    margin: 1rem 0;
+}
+
+.right-set .itemColor::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+.right-set .itemColor ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.right-set .itemColor ul li {
+    border: solid 2px #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+    height:20px;
+    margin-right: 0.4rem;
+    transition: all 0.4s ease;   
+    width:20px;
+}
+
+.right-set .itemColor ul li:first-child {
+    background: #222;
+}
+
+.right-set .itemColor ul li:first-child:hover {
+    border-color: #222;
+}
+
+.right-set .itemColor ul li:nth-child(2) {
+    background: #07449f;
+}
+
+.right-set .itemColor ul li:nth-child(2):hover {
+    border-color: #07449f;
+}
+
+.right-set .cartButton {
+    background: none;
+    border: solid 2px #111;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 2rem;
+    letter-spacing:0.1rem;
+    transition: all 0.4s ease;
+    width: 100%;
+}
+
+.right-set .cartButton:hover {
+    background: #111;
+    color: #fff;
+}
